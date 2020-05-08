@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './TransactionHistory.module.css';
+import { transactionHistory } from './TransactionHistory.module.css';
 
-function ucFirst(str) {
+const ucFirst = str => {
   if (!str) return str;
   return str[0].toUpperCase() + str.slice(1).toLowerCase();
-}
+};
 
 const TransactionHistory = ({ items }) => (
-  <table className={styles.transactionHistory}>
+  <table className={transactionHistory}>
     <thead>
       <tr>
         <th>Type</th>

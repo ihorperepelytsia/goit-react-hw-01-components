@@ -1,17 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Statistics.module.css';
+import {
+  statistics,
+  headline,
+  statList,
+  item,
+  format,
+  percent,
+} from './Statistics.module.css';
 
-function randomInteger(min, max) {
+const randomInteger = (min, max) => {
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
-}
+};
 
 const Statistics = ({ title, stats = [] }) => (
-  <section className={styles.statistics}>
-    {title && <h2 className={styles.title}>{title}</h2>}
+  <section className={statistics}>
+    {title && <h2 className={headline}>{title}</h2>}
 
-    <ul className={styles.statList}>
+    <ul className={statList}>
       {stats.map(({ id, label, percentage }) => {
         const RandobBackgroundColor = {
           backgroundColor: `rgb(${randomInteger(1, 256)},${randomInteger(
@@ -20,9 +27,9 @@ const Statistics = ({ title, stats = [] }) => (
           )},${randomInteger(1, 256)})`,
         };
         return (
-          <li className={styles.item} style={RandobBackgroundColor} key={id}>
-            <span className={styles.label}>{label}</span>
-            <span className={styles.percentage}>{percentage}%</span>
+          <li className={item} style={RandobBackgroundColor} key={id}>
+            <span className={format}>{label}</span>
+            <span className={percentage}>{percent}%</span>
           </li>
         );
       })}

@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.title {
+.headline {
     color: #475965;
     font-size: 16px;
     font-weight: 700;
@@ -33,7 +33,7 @@ body {
     letter-spacing: 0.3px;
 }
 
-.label {
+.format {
     display: block;
     font-size: 12px;
     font-weight: 300;
@@ -41,7 +41,7 @@ body {
 
 }
 
-.percentage {
+.percent {
     display: block;
     font-size: 18px;
     font-weight: 400;
