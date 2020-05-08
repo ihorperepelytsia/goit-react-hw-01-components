@@ -16,7 +16,7 @@ importScripts(
 );
 
 importScripts(
-  '/goit-react-hw-01-components/precache-manifest.53ec220da5137b9d405bd886d0cebb13.js',
+  '/goit-react-hw-01-components/precache-manifest.64ffc8677c4e2f911b86f36d8d93dcef.js',
 );
 
 self.addEventListener('message', event => {
