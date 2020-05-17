@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { transactionHistory } from './TransactionHistory.module.css';
-
-const ucFirst = str => {
-  if (!str) return str;
-  return str[0].toUpperCase() + str.slice(1).toLowerCase();
-};
+import ucFirst from '../../utilities/ucFirst';
 
 const TransactionHistory = ({ items }) => (
   <table className={transactionHistory}>

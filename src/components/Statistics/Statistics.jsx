@@ -8,11 +8,7 @@ import {
   format,
   percent,
 } from './Statistics.module.css';
-
-const randomInteger = (min, max) => {
-  let rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-};
+import randomInteger from '../../utilities/randomInteger';
 
 const Statistics = ({ title, stats = [] }) => (
   <section className={statistics}>
@@ -29,7 +25,7 @@ const Statistics = ({ title, stats = [] }) => (
         return (
           <li className={item} style={RandobBackgroundColor} key={id}>
             <span className={format}>{label}</span>
-            <span className={percentage}>{percent}%</span>
+            <span className={percent}>{percentage}%</span>
           </li>
         );
       })}

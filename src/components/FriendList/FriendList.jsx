@@ -5,9 +5,9 @@ import styles from './Friends.module.css';
 
 const FriendList = ({ friends }) => (
   <ul className={styles.friendList}>
-    {friends.map(item => (
-      <li className={styles.item} key={item.id}>
-        <FriendListItem {...item} />
+    {friends.map(friend => (
+      <li className={styles.item} key={friend.id}>
+        <FriendListItem {...friend} />
       </li>
     ))}
   </ul>
